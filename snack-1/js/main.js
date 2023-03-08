@@ -12,3 +12,14 @@ const nomiInvitati = [
   "Amal Clooney",
   "Maneskin",
 ];
+
+const tavoloVip = nomiInvitati.map((element,index) => {
+    const vip = {
+        nome: element,
+        posto: index
+    }
+    return vip;
+});
+
+console.log(tavoloVip);
+
