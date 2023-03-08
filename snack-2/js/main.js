@@ -38,3 +38,11 @@ const listaStudenti = [
     voto: 84,
   },
 ];
+
+// Creazione della lista delle targhe con tutti i nomi in maiuscolo
+const targaStudente = listaStudenti.map((element) => {
+    const targa = element.nome.toUpperCase();
+    return targa;
+})
+// Stampa in console lista delle targhe
+console.log(targaStudente);
