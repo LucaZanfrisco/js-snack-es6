@@ -1,5 +1,40 @@
 "use strict";
 
+// FUNZIONI
+const targa = (listaStudenti) => {
+  // Creazione della lista delle targhe con tutti i nomi in maiuscolo
+  const targaStudente = listaStudenti.map((element) => {
+    const targa = element.nome.toUpperCase();
+    return targa;
+  });
+  return targaStudente;
+};
+
+const voti = (listaStudenti) => {
+  //Creazione di una lista in base al voto degli studenti
+  const listaVoto = listaStudenti.filter((element) => {
+    if (element.voto >= 70) {
+      return true;
+    }
+    return false;
+  });
+  return listaVoto;
+};
+
+const votiId = (listaStudenti) => {
+  //Crazione della lista in base al voto e all'id
+  const listaVotoId = listaStudenti.filter((element) => {
+    if (element.voto >= 70 && element.id >= 120) {
+      return true;
+    }
+    return false;
+  });
+  return listaVotoId;
+};
+
+
+// MAIN
+
 // Array di oggetti (lista degli studenti)
 const listaStudenti = [
   {
@@ -39,30 +74,14 @@ const listaStudenti = [
   },
 ];
 
-// Creazione della lista delle targhe con tutti i nomi in maiuscolo
-const targaStudente = listaStudenti.map((element) => {
-    const targa = element.nome.toUpperCase();
-    return targa;
-})
-// Stampa in console lista delle targhe
+// Chiamata alla funzione della targa
+const targaStudente = targa(listaStudenti);
 console.log(targaStudente);
 
-// Creazione di una lista in base al voto degli studenti
-const listaVoto = listaStudenti.filter((element) => {
-    if(element.voto >= 70){
-        return true;
-    }
-    return false;
-})
-// Stampa in console della lista in base al voto
+// Chiamata alla funzione del voto
+const listaVoto = voti(listaStudenti);
 console.log(listaVoto);
 
-// Crazione della lista in base al voto e all'id
-const listaVotoId = listaStudenti.filter((element) => {
-    if(element.voto >= 70 && element.id >= 120){
-        return true;
-    }
-    return false;
-})
-// Stampa in console della lista in base al voto e all'id
+// Chiamata alla funzione del voto e id
+const listaVotoId = votiId(listaStudenti);
 console.log(listaVotoId);
