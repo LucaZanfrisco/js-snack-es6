@@ -57,3 +57,12 @@ const listaVoto = listaStudenti.filter((element) => {
 // Stampa in console della lista in base al voto
 console.log(listaVoto);
 
+// Crazione della lista in base al voto e all'id
+const listaVotoId = listaStudenti.filter((element) => {
+    if(element.voto >= 70 && element.id >= 120){
+        return true;
+    }
+    return false;
+})
+// Stampa in console della lista in base al voto e all'id
+console.log(listaVotoId);
