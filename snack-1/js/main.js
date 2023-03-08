@@ -13,12 +13,15 @@ const nomiInvitati = [
   "Amal Clooney",
   "Maneskin",
 ];
+// Nome del tavolo
+const nomeTavolo = 'Tavolo VIP';
 
 // Inserimento degli invitati in un array di oggetti dove sono specificati nome e posto a sedere
 const tavoloVip = nomiInvitati.map((element,index) => {
     const vip = {
+        tavolo: nomeTavolo,
         nome: element,
-        posto: index
+        posto: (index + 1)
     }
     return vip;
 });
