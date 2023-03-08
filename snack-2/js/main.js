@@ -46,3 +46,14 @@ const targaStudente = listaStudenti.map((element) => {
 })
 // Stampa in console lista delle targhe
 console.log(targaStudente);
+
+// Creazione di una lista in base al voto degli studenti
+const listaVoto = listaStudenti.filter((element) => {
+    if(element.voto >= 70){
+        return true;
+    }
+    return false;
+})
+// Stampa in console della lista in base al voto
+console.log(listaVoto);
+
