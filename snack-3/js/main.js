@@ -41,11 +41,10 @@ const [{ modello }] = biciLeggera;
 // Stampo in console il nome del modello e il peso
 console.log(`Modello: ${modello}, Peso: ${peso}kg`);
 
-
 // Selezione degli elementi nel DOM
 const foto = document.querySelectorAll("img");
-const nome = document.querySelector('.nome')
-const pesoBici = document.querySelector('.peso');
+const nome = document.querySelector(".nome");
+const pesoBici = document.querySelector(".peso");
 
 // Aggiunta al primo elemento la classe
 let attivo = 0;
@@ -63,29 +62,29 @@ next.addEventListener("click", function () {
     foto[attivo].classList.add("show");
     nome.innerHTML = listaBici[attivo].modello;
     pesoBici.innerHTML = listaBici[attivo].peso;
-  }else{
+  } else {
     attivo = 0;
-    foto[attivo].classList.add('show');
+    foto[attivo].classList.add("show");
     nome.innerHTML = listaBici[attivo].modello;
     pesoBici.innerHTML = listaBici[attivo].peso;
   }
 });
 
 // Selezione del bottone indietro
-const prev = document.querySelector('.prev');
+const prev = document.querySelector(".prev");
 
 // Evento al bottone indietro
-prev.addEventListener('click', function(){
-    foto[attivo].classList.remove('show');
-    if(attivo > 0){
-      attivo--;
-      foto[attivo].classList.add('show');
-      nome.innerHTML = listaBici[attivo].modello;
-      pesoBici.innerHTML = listaBici[attivo].peso;
-    }else{
-      attivo = listaBici.length - 1 ;
-      foto[attivo].classList.add('show');
-      nome.innerHTML = listaBici[attivo].modello;
-      pesoBici.innerHTML = listaBici[attivo].peso;
+prev.addEventListener("click", function () {
+  foto[attivo].classList.remove("show");
+  if (attivo > 0) {
+    attivo--;
+    foto[attivo].classList.add("show");
+    nome.innerHTML = listaBici[attivo].modello;
+    pesoBici.innerHTML = listaBici[attivo].peso;
+  } else {
+    attivo = listaBici.length - 1;
+    foto[attivo].classList.add("show");
+    nome.innerHTML = listaBici[attivo].modello;
+    pesoBici.innerHTML = listaBici[attivo].peso;
   }
-})
+});
