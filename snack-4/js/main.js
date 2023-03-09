@@ -67,7 +67,7 @@ const listaSquadre = [
   },
 ];
 
-console.log(listaSquadre);
+console.log({listaSquadre});
 
 const min = 1;
 const max = 100;
@@ -76,13 +76,19 @@ const max = 100;
 const nuovaLista = listaSquadre.map((element) => {
   // Chiamata alla funzione che genera i numeri random
   const stat = numeriRandom(min, max);
-  element.punti = stat.punti;
-  element.falli = stat.falli;
-  return element;
+  const {nome} = element;
+  let {punti,falli} = element;
+  punti = stat.punti;
+  falli = stat.falli;
+  return {
+    nome,
+    punti,
+    falli
+  }
 });
 
 // Stampa della lista con i punti e falli generati
-console.log(nuovaLista);
+console.log({nuovaLista});
 
 // Crea una nuova lista da dove prende solo il nome e i falli commessi
 const listaNomiFalli = nuovaLista.map((element) => {
@@ -94,7 +100,7 @@ const listaNomiFalli = nuovaLista.map((element) => {
 });
 
 // Stampa in console della lista Nomi e falli
-console.log(listaNomiFalli);
+console.log({listaNomiFalli});
 
 // Seconda versione di stampa in console
 listaNomiFalli.forEach((element) => {
