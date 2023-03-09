@@ -105,6 +105,22 @@ console.log({listaNomiFalli});
 // Seconda versione di stampa in console
 listaNomiFalli.forEach((element) => {
   for (let key in element) {
-    console.log(`${[key]}: ${element[key]}`);
+    // console.log(`${[key]}: ${element[key]}`);
   }
 });
+
+// Selezioni degli elementi nel DOM
+const template = document.getElementById('template');
+const lista = document.querySelector('.lista');
+
+// Ciclo foreach che permette di stampare nel Dom il nome della squadra e i falli commessi
+listaNomiFalli.forEach((element) => {
+
+    const teamTemplate = template.content.cloneNode(true);
+
+    teamTemplate.querySelector('.nome').innerText = element.nome;
+    teamTemplate.querySelector('.falli').innerText = element.falli;
+    
+    lista.append(teamTemplate);
+})
+

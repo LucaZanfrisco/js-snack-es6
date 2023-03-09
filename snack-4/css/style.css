@@ -1,0 +1,47 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ------- */
+
+/* Common */
+body{
+    background-color: #292F36;
+}
+.col{
+    width: 100%;
+    text-align: center;
+}
+.titolo{
+    font-size: 50px;
+    margin-bottom: 1.25rem;
+    color: #FFE66D;
+}
+
+/* Main */
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container {
+    width: 62.5rem;
+    padding: 1.25rem;
+    background-color: #FF6B6B;
+    border-radius: 1.5625rem;
+    color: #F7FFF7;
+}
+.squadra{
+    display: flex;
+}
+
+.lista{
+    list-style: none;
+}
+.nome,.falli{
+    font-size: 1.5625rem;
+}
+/* ------- */

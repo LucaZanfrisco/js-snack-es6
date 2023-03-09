@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Squadre di Calcio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <!-- Contenitore generale -->
+    <main>
+        <!-- Container della lista -->
+        <div class="container">
+            <ul class="lista">
+                <li class="squadra">
+                    <div class="col titolo">Squadra</div>
+                    <div class="col titolo">Falli</div>
+                </li>
+            </ul>
+        </div>
+        <!-- /Container della lista -->
+    </main>
+    <!-- /Contenitore generale -->
+
+    <!-- Template dove inserire le squadre -->
+    <template id="template">
+        <!-- Elenco delle squadre e dei falli -->
+        <li class="squadra">
+            <div class="col nome"></div>
+            <div class="col falli"></div>
+        </li>
+        <!-- /Elenco delle squadre e dei falli -->
+    </template>
+    <!-- /Template deve inserire le squadre -->
     <script src="js/main.js"></script>
 </body>
+
 </html>
