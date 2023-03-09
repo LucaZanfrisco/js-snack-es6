@@ -40,3 +40,5 @@ const biciLeggera = listaBici.filter(element => element.peso === peso);
 const [{modello}] = biciLeggera;
 // Stampo in console il nome del modello e il peso
 console.log(`Modello: ${modello}, Peso: ${peso}kg`);
+
+
