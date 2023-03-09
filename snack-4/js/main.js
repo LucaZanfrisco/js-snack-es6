@@ -113,6 +113,9 @@ listaNomiFalli.forEach((element) => {
 const template = document.getElementById('template');
 const lista = document.querySelector('.lista');
 
+// Sort dell'array crescente in base al numero di falli
+listaNomiFalli.sort((a,b) => a.falli - b.falli)
+
 // Ciclo foreach che permette di stampare nel Dom il nome della squadra e i falli commessi
 listaNomiFalli.forEach((element) => {
 
