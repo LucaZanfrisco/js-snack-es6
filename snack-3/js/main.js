@@ -73,6 +73,7 @@ next.addEventListener("click", function () {
 
 // Selezione del bottone indietro
 const prev = document.querySelector('.prev');
+
 // Evento al bottone indietro
 prev.addEventListener('click', function(){
     foto[attivo].classList.remove('show');
